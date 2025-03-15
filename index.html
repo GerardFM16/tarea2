@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Retro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+        }
+        .container {
+            padding: 2rem;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            text-align: center;
+        }
+        .cart, .checkout, .contact {
+            max-width: 600px;
+            margin: auto;
+            padding: 2rem;
+            border: 1px solid #ddd;
+        }
+        input, button, textarea {
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tienda Retro</h1>
+    </header>
+    
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#carrito">Carrito</a>
+        <a href="#checkout">Checkout</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    
+    <section id="productos" class="container">
+        <h2>Productos</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <h3>Funko Pop</h3>
+                <p>$15.00</p>
+                <button>Añadir al carrito</button>
+            </div>
+            <div class="product-card">
+                <h3>Libro Retro</h3>
+                <p>$12.00</p>
+                <button>Añadir al carrito</button>
+            </div>
+            <div class="product-card">
+                <h3>Juguete Clásico</h3>
+                <p>$8.00</p>
+                <button>Añadir al carrito</button>
+            </div>
+            <div class="product-card">
+                <h3>Videojuego Retro</h3>
+                <p>$20.00</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="carrito" class="cart">
+        <h2>Carrito de Compras</h2>
+        <p>No hay productos en el carrito.</p>
+    </section>
+    
+    <section id="checkout" class="checkout">
+        <h2>Checkout</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" required>
+
+            <label for="metodo-pago">Método de Pago:</label>
+            <select id="metodo-pago">
+                <option value="tarjeta">Tarjeta</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <button type="submit">Finalizar Compra</button>
+        </form>
+    </section>
+    
+    <section id="contacto" class="contact">
+        <h2>Contacto</h2>
+        <form>
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Tienda Retro. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
